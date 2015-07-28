@@ -1,0 +1,6 @@
+\documentclass{article}
+\begin{document}
+\thispagestyle{empty}
+$Y = X\beta + \varepsilon$
+\end{document}
+  

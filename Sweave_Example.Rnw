@@ -11,4 +11,7 @@ print(x)
 I am in LaTeX and I want to say that my variable x is \Sexpr{x}.
 
 
+$Y = X\beta + \varepsilon$
+
+
 \end{document}

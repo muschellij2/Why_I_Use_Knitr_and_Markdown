@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.4)  28 JUL 2015 11:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.1.4)  28 JUL 2015 11:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Sweave_Example.tex
-(./Sweave_Example.tex
+**inline.tex
+(./inline.tex
 LaTeX2e <2014/05/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
@@ -78,8 +78,8 @@ Package: alltt 1997/06/16 v2.0g defines alltt environment
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-(./Sweave_Example.aux)
-\openout1 = `Sweave_Example.aux'.
+(./inline.aux)
+\openout1 = `inline.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
 LaTeX Font Info:    ... okay on input line 52.
@@ -155,24 +155,27 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package color Info: Redefining color shadecolor on input line 55.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 56.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 56.
 
 [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./Sweave_Example.aux) ) 
+(./inline.aux) ) 
 Here is how much of TeX's memory you used:
  1597 strings out of 493109
- 23280 string characters out of 6135005
+ 23215 string characters out of 6135005
  80162 words of memory out of 5000000
- 5067 multiletter control sequences out of 15000+600000
- 3808 words of font info for 15 fonts, out of 8000000 for 9000
+ 5068 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,5n,23p,292b,171s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmtt10.pfb>
-Output written on Sweave_Example.pdf (1 page, 23699 bytes).
+ 38i,5n,23p,284b,112s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr10.pfb>
+Output written on inline.pdf (1 page, 21248 bytes).
 PDF statistics:
  16 PDF objects out of 1000 (max. 8388607)
  10 compressed objects within 1 object stream
