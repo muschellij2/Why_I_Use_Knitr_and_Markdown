@@ -1,0 +1,14 @@
+\documentclass{article}
+
+\begin{document}
+
+<<echo=FALSE, label="I am a code chunk">>=
+## we are not in R code
+x = 5
+print(x)
+# we stop the Sweave with an @ symbol (obviously right?)
+@
+I am in LaTeX and I want to say that my variable x is \Sexpr{x}.
+
+
+\end{document}

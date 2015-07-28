@@ -1,0 +1,82 @@
+---
+title: "Why I use Knitr/Markdown"
+author: "John Muschelli"
+date: "July 28, 2015"
+output: ioslides_presentation
+---
+
+```{r results='hide', echo=FALSE}
+rinline <- function(code) { sprintf('<code class="r">```  ```</code>', code) }
+```
+## RMarkdown/LaTeX/pandoc
+
+
+- LaTeX and RMarkdown are types of **markdown**
+- pdflatex/pandoc are engines/interpreters that take the markdown to another format
+  - pdflatex makes PDFs 
+    - $\LaTeX \xrightarrow{pdflatex} \text{ PDF}$
+  - [pandoc](http://pandoc.org/) can convert almost any type of markdown to any other format
+    - think markdown to a pdf/html/Word document
+      - $\text{md} \xrightarrow{pandoc} \text{ Whatever}$
+
+
+## Knitr/Sweave
+
+- Sweave (pronounced S-weave or sweave) is a parser that takes LaTeX/TeX (not other types of markdown) and embedded code
+  - Sweave creates a LaTeX/TeX document that has that code and it's output formatted for LaTeX/TeX
+- Filename extensions are usually `Rnw`/`rnw` or maybe `.Rtex`
+
+## Knitr Example
+
+Example:
+```
+<<echo=FALSE, label="I am a code chunk">>=
+## we are not in R code
+x = 5
+print(x)
+# we stop the Sweave with an @ symbol (obviously right?)
+@
+I am in LaTeX and I want to say that my variable x is \Sexpr{x}.
+```
+
+## Knitr/Sweave
+
+- Knitr (knit-R or "neater", though everyone goes with knit-r) is an extension of Sweave.
+  - It can handle LaTeX
+  - It can handle markdown, specifically RMarkdown (which is a dialect of generic markdown)
+  - Filename extensions are usually `Rmd`/`rmd` 
+  
+
+## Knitr Example
+
+Example:
+```{r, results='hide', echo=FALSE}
+x = 5 
+```
+
+```{r, results='asis', echo=FALSE}
+cat(paste0('<pre class="lang-r">\n```{r echo=FALSE, label="I am a code chunk"}\n', 
+"## we are not in R code\n", "x = 5\n", "print(x)\n", "# we stop the knitr with 3 backticks \n```\n</pre>"))
+```
+
+I am in Rmarkdown and I want to say that my variable x is `r x`.
+
+## Plots work (may need to resize)
+
+```{r, message=FALSE}
+library(fslr)
+t1 = readnii("JHU_MNI_SS_T1_brain.nii.gz")
+ortho2(t1)
+```
+
+
+
+## Tables work (xtable package helpful)
+
+```{r, message=FALSE, results='asis'}
+tab = table(c(t1))
+library(xtable)
+xtab = xtable(tab)
+print.xtable(xtab, type = "html")
+```
+

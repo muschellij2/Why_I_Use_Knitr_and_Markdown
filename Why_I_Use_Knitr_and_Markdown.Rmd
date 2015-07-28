@@ -1,0 +1,20 @@
+---
+title: "Example of Knitr"
+author: "John Muschelli"
+date: "July 28, 2015"
+output: html_document
+---
+
+A generic `knitr` document is like any other document.  The output can be HTML/PDF/Word:
+
+The generic setup from RStudio is this:
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
